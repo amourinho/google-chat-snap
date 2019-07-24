@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Google Chat
+Icon=${SNAP}/meta/gui/icon.png
+Categories=Communication;Chat;
+Exec=google-chat
+Terminal=false

@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/var/lib/snapd/snap/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.6.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOTEMPTY: directory not empty, rmdir '/media/amourinho/Storage/development/google-chat/node_modules/electron/dist/resources'
+
+npm manifest: 
+  {
+    "name": "google-chat",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "electron .",
+      "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/chatlogo.icns --prune=true --out=release-builds",
+      "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/chatlogo.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Webview\"",
+      "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/chatlogo-512.png --prune=true --out=release-builds",
+      "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ webview-darwin-x64/Electron\\ webview.app electron-webview --out=release-builds --overwrite --icon=assets/icons/chatlogo.icns"
+    },
+    "bin": {
+      "google-chat": "index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "electron": "^5.0.7",
+      "electron-installer-snap": "^4.0.0",
+      "electron-packager": "^14.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
